@@ -4,6 +4,7 @@ import requests
 import os
 import json
 app = Flask(__name__)
+app.config[‘JSONIFY_PRETTYPRINT_REGULAR’] = False
 
 def get_api_key() -> str:
     secret = os.environ.get("COMPUTE_API_KEY")
